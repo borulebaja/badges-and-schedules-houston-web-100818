@@ -12,7 +12,7 @@ end
 
 def assign_rooms(speakers)
   assign=[]
-  speakers.each_with_index{|speaker,index|
+  speakers.each_with_index{|speaker,index| #to keep track of the index num of the current iteration
   assign.push("Hello, #{speaker}! You'll be assigned to room #{index + 1}!")
    }
    return assign
@@ -23,7 +23,7 @@ def printer(attendees)
    puts badge
   end 
   
-  assign_rooms(attendees).each do |badge|
+  assign_rooms(attendees).each do |badge| #used .each to print out each individual assignment
     puts badge
   end  
 end
